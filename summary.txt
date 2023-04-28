@@ -4,9 +4,9 @@
   egyelőre csak ezt az egy példát tettem bele:
   https://piggy-bank-7eaa5-default-rtdb.europe-west1.firebasedatabase.app/example.json
 
-- létrehoztam az appot, feltettem githubra, felraktam a react routert és az egy konkrét költést kivéve megcsináltam a route-okat
+- Létrehoztam az appot, feltettem githubra, felraktam a react routert és az egy konkrét költést kivéve megcsináltam a route-okat
   (Főoldal, új költés, költések) meg beraktam egy 404 paget bónuszként
   Github link:
   https://github.com/Vellyus/piggybank
 
-  
+- Csináltam egy külön komponenst egy konkrét kiadáshoz a kiadásokon belül, egyelőre csak egy linket hoz be, ami a firebase-es példa url-re mutat
