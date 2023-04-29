@@ -1,6 +1,4 @@
-import { NavLink } from "react-router-dom"
-import { useParams } from "react-router-dom"
-
+import { NavLink, useParams } from "react-router-dom"
 
 export function Spending() {
   const { id } = useParams()
