@@ -10,3 +10,7 @@
   https://github.com/Vellyus/piggybank
 
 - Csináltam egy külön komponenst egy konkrét kiadáshoz a kiadásokon belül, egyelőre csak egy linket hoz be, ami a firebase-es példa url-re mutat
+
+05.01
+
+- Tudom, hogy nem ez jött volna a menetben, de elkezdtem az adatbázis elemeinek kilistázását. Azt hittem, hogy ez lesz a legkönnyebb kövi lépés, de nagyot tévedtem. Így React-ben nekem még új volt a fetch és a useEffect-ről is azt hittem, hogy megy, de szembesültem vele, hogy még nem értem egészen. Végül sikerült, egyelőre csak list elemekbe szedni, de órákig elvoltam vele.
