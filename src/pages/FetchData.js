@@ -21,7 +21,7 @@ export function FetchData() {
     <>
       { data && Object.keys(data).map((e, i) => {
         return (
-          <li key={ i }>{ data[e].date } | data{ [e].item } | { data[e].amount } </li>
+          <li key={ i }>{ data[e].date } | { data[e].item } | { data[e].amount } </li>
         )
       }) }
     </>
