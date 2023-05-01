@@ -2,7 +2,6 @@ import { NavLink, Route, Routes } from "react-router-dom"
 import { Home } from "./pages/Home"
 import { NewSpending } from "./pages/NewSpending"
 import { Expenses } from "./pages/Expenses"
-import { Spending } from "./pages/Spending"
 import { NotFound } from "./pages/NotFound"
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
         <Route path="/" element={ <Home /> } />
         <Route path="/new-spending" element={ <NewSpending /> } />
         <Route path="/expenses" element={ <Expenses /> } />
-        <Route path="/expenses/:id" element={ <Spending /> } />
         <Route path="*" element={ <NotFound /> } />
       </Routes>
     </>
