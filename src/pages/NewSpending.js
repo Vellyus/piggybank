@@ -8,10 +8,10 @@ export function NewSpending() {
           <input type="text" id="item" name="item"></input></label>
 
         <label for="date">Dátum:
-          <input type="text" id="date" name="date"></input></label>
+          <input type="date" id="date" name="date"></input></label>
 
         <label for="amount">Összeg:
-          <input type="text" id="amount" name="amount"></input></label>
+          <input type="number" id="amount" name="amount"></input></label>
 
 
         <button type="submit" value="Submit">Mentés</button>
