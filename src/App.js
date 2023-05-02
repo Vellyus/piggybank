@@ -1,5 +1,4 @@
 import { Navigation } from "./pages/Navigation"
-import { Home } from "./pages/Home"
 
 function App() {
   return (
