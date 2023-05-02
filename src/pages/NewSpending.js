@@ -1,3 +1,7 @@
 export function NewSpending() {
-  return <h1>Új költés</h1>
+  return (
+    <main>
+      <h2>Új költés</h2>
+    </main>
+  )
 }

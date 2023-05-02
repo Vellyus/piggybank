@@ -1,3 +1,7 @@
 export function Home() {
-  return <h1>Főoldal</h1>
+  return (
+    <main>
+      <h2>Főoldal</h2>
+    </main>
+  )
 }

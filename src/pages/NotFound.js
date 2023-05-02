@@ -1,3 +1,7 @@
 export function NotFound() {
-  return <h1>Az oldal nem található</h1>
+  return (
+    <main>
+      <h2>Az oldal nem található</h2>
+    </main>
+  )
 }
