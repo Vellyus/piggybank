@@ -10,6 +10,7 @@ export function Navigation() {
   return (
     <>
       <nav>
+        <h2>Menü</h2>
         <ul>
           <li><NavLink to="/">Főoldal</NavLink></li>
           <li><NavLink to="/new-spending">Új költés</NavLink></li>
