@@ -20,3 +20,9 @@
 - A navigációt külön komponensbe tettem
 
 - Nagyjából megcsináltam Főoldal és az Új költés HTML + CSS részét
+
+05.04
+
+- Megpróbáltam átállni az object alapon létrehozható router-re, de még nem egészen értem, majd később még utánanézek
+
+- A FetchData komponenst átneveztem ExpenseItems-re
