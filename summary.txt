@@ -29,3 +29,4 @@
 
 - Az api kommunikációt kiszerveztem egy apiService nevű fájlba
 
+- A dbUrl-t kiraktam egy constant nevű fájlba, és mikor kell a ".json" kiterjesztés mögé mindig külön hozzárakom
