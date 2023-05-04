@@ -1,4 +1,4 @@
-import { FetchData } from "./FetchData"
+import { ExpenseItems } from "./ExpenseItems"
 
 export function Expenses() {
   return (
@@ -6,7 +6,7 @@ export function Expenses() {
       <main>
         <h2>Költések</h2>
         <ul>
-          <FetchData />
+          <ExpenseItems />
         </ul>
       </main>
     </>
