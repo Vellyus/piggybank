@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { getData } from "../apiService"
 
 export function ExpenseItems() {
   const [data, setData] = useState(null)
@@ -6,17 +7,13 @@ export function ExpenseItems() {
   const dbUrl = "https://piggy-bank-7eaa5-default-rtdb.europe-west1.firebasedatabase.app/.json"
 
   useEffect(() => {
-    async function getData(url) {
-      try {
-        const response = await fetch(url)
-        const data = await response.json()
-        setData(data)
-      } catch (error) {
-        console.error(error)
-      }
+    async function fetchData() {
+      const data = await getData(dbUrl)
+      setData(data)
     }
-    getData(dbUrl)
+    fetchData()
   }, [])
+
   return (
     <>
       { data && Object.keys(data).map((e, i) => {
