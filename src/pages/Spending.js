@@ -1,8 +1,8 @@
 import { NavLink, useParams } from "react-router-dom"
+import { dbUrl } from "../constant"
 
 export function Spending() {
   const { id } = useParams()
-  const dbUrl = "https://piggy-bank-7eaa5-default-rtdb.europe-west1.firebasedatabase.app/"
 
   return (
     <li> <NavLink to={ `${ dbUrl }${ id }.json` }>{ id }</NavLink></li>
