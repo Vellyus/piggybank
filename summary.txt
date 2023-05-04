@@ -26,3 +26,6 @@
 - Megpróbáltam átállni az object alapon létrehozható router-re, de még nem egészen értem, majd később még utánanézek
 
 - A FetchData komponenst átneveztem ExpenseItems-re
+
+- Az api kommunikációt kiszerveztem egy apiService nevű fájlba
+
