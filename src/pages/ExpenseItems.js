@@ -1,17 +1,15 @@
 import { useEffect, useState } from "react"
 import { getData } from "../apiService"
 import { dbUrl } from "../constant"
+import { useLoaderData } from "react-router-dom"
 
 export function ExpenseItems() {
   const [data, setData] = useState(null)
+  const loaderData = useLoaderData()
 
   useEffect(() => {
-    async function fetchData() {
-      const data = await getData(dbUrl + ".json")
-      setData(data)
-    }
-    fetchData()
-  }, [])
+    setData(loaderData)
+  }, [loaderData])
 
   return (
     <>
@@ -22,4 +20,8 @@ export function ExpenseItems() {
       }) }
     </>
   )
+}
+
+export function loader() {
+  return getData(dbUrl + ".json")
 }

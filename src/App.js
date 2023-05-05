@@ -1,14 +1,29 @@
-import { Navigation } from "./pages/Navigation"
+import { RootLayout } from "./pages/RootLayout"
+import { createBrowserRouter } from "react-router-dom"
+import { Home } from "./pages/Home"
+import { NewSpending } from "./pages/NewSpending"
+import { Expenses } from "./pages/Expenses"
+import { Spending } from "./pages/Spending"
+import { NotFound } from "./pages/NotFound"
+import { loader as expensesLoader } from "./pages/ExpenseItems"
+import { RouterProvider } from "react-router-dom"
+
+const router = createBrowserRouter((
+  [
+    {
+      path: "/", element: <RootLayout />, children: [
+        { path: "/", element: <Home /> },
+        { path: "/new-spending", element: <NewSpending /> },
+        { path: "/expenses", element: <Expenses />, loader: expensesLoader },
+        { path: "/expenses/:id", element: <Spending /> },
+        { path: "*", element: <NotFound /> }
+      ]
+    },
+  ]
+))
 
 function App() {
-  return (
-    <>
-      <h1>Malacka házipénztár</h1>
-      <div className="wrapper">
-        <Navigation />
-      </div>
-    </>
-  )
+  return <RouterProvider router={ router } />
 }
 
 export default App
