@@ -17,6 +17,7 @@ export function ExpenseItems() {
         <th>Dátum</th>
         <th>Tétel</th>
         <th>Összeg</th>
+        <th></th>
         { data && Object.keys(data).map((e, i) => {
           return (<>
             <tr key={ i } >
