@@ -100,3 +100,19 @@ img {
 #newSpendingForm input::placeholder {
   color: #C7D3DC;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+tr,
+td {
+  padding: 1rem 3rem;
+  border: 2px solid #C7D3DC;
+}
+
+th,
+.bold {
+  font-weight: bold;
+}

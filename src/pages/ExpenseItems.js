@@ -13,11 +13,22 @@ export function ExpenseItems() {
 
   return (
     <>
-      { data && Object.keys(data).map((e, i) => {
-        return (
-          <li key={ i }>{ data[e].date } | { data[e].item } | { data[e].amount } </li>
-        )
-      }) }
+      <table>
+        <th>Dátum</th>
+        <th>Tétel</th>
+        <th>Összeg</th>
+        { data && Object.keys(data).map((e, i) => {
+          return (<>
+            <tr key={ i } >
+              <td>{ data[e].date }</td>
+              <td>{ data[e].item } </td>
+              <td>{ data[e].amount }</td>
+              <td className="bold">Törlés | Módosítás</td>
+            </tr>
+          </>
+          )
+        }) }
+      </table>
     </>
   )
 }

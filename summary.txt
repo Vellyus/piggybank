@@ -36,3 +36,5 @@
 - Újra megpróbáltam átírni a router-t az újabb syntax-ra, ezúttal sikerrel jártam
 
 - Haladtam az Új költés oldal CSS-ével
+
+- A db-ből lekért költéseket már nem list itemekként renderelem, hanem beraktam egy table-be és nagyjából megírtam hozzá a CSS-t is
