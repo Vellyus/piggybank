@@ -37,7 +37,7 @@ main {
   padding: 1rem;
   margin: 0 1rem;
   height: 100%;
-  border: 3px solid #ddd;
+  border: 3px solid #C7D3DC;
 }
 
 nav {
@@ -80,12 +80,23 @@ img {
 #newSpendingForm input {
   padding: .4rem;
   width: 18rem;
+  border: 2px solid #C7D3DC;
+  border-radius: .2rem;
 }
 
 
 #newSpendingForm button {
   margin-top: 2rem;
   align-self: flex-end;
-  padding: .5rem;
-  width: 10rem;
+  padding: 1rem 1.6rem;
+  border: none;
+  border-radius: .4rem;
+  background-color: #6558F5;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#newSpendingForm input::placeholder {
+  color: #C7D3DC;
 }
