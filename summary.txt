@@ -34,3 +34,5 @@
 05.05
 
 - Újra megpróbáltam átírni a router-t az újabb syntax-ra, ezúttal sikerrel jártam
+
+- Haladtam az Új költés oldal CSS-ével
