@@ -30,3 +30,7 @@
 - Az api kommunikációt kiszerveztem egy apiService nevű fájlba
 
 - A dbUrl-t kiraktam egy constant nevű fájlba, és mikor kell a ".json" kiterjesztés mögé mindig külön hozzárakom
+
+05.05
+
+- Újra megpróbáltam átírni a router-t az újabb syntax-ra, ezúttal sikerrel jártam
