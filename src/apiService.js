@@ -1,3 +1,23 @@
+import { getDatabase, ref, set } from "firebase/database"
+import { initializeApp } from "firebase/app"
+import { dbUrl } from "./constant"
+
+const firebaseConfig = {
+  databaseURL: dbUrl
+}
+
+const app = initializeApp(firebaseConfig)
+const db = getDatabase()
+
+export function addNewSpending(id, item, date, amount) {
+  const reference = ref(db, id)
+  set(reference, {
+    item: item,
+    date: date,
+    amount: amount
+  })
+}
+
 export async function getData(url) {
   try {
     const response = await fetch(url)

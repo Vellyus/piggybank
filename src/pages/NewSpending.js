@@ -1,15 +1,17 @@
-import { useState } from "react"
+import { addNewSpending } from "../apiService"
 
 export function NewSpending() {
-  const [formData, setFormData] = useState(null)
-
   const handleSubmit = (e) => {
     e.preventDefault()
-    setFormData({
-      product: e.target.elements.product.value,
-      date: e.target.elements.date.value,
-      amount: e.target.elements.amount.value,
-    })
+    try {
+      const product = e.target.elements.product.value
+      const date = e.target.elements.date.value
+      const amount = e.target.elements.amount.value
+      addNewSpending(crypto.randomUUID(), product, date, amount)
+      document.querySelector("#newSpendingForm").reset()
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
