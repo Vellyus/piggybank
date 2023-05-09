@@ -7,6 +7,7 @@ export function NewSpending() {
       const product = e.target.elements.product.value
       const date = e.target.elements.date.value
       const amount = e.target.elements.amount.value
+
       addNewSpending(crypto.randomUUID(), product, date, amount)
       document.querySelector("#newSpendingForm").reset()
     } catch (error) {

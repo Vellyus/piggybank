@@ -46,3 +46,7 @@
 - az Új költés form label-eknél eredetileg "for"-t használtam "htmlFor" helyett, nem tudtam, hogy ez így nem tetszik a react-nek, úgyhogy átírtam
 
 - az Új költés form submitnél egyelőre csak updateli a statet az input értékeivel
+
+05.09
+
+- Az új költés form már működik és a költésekhez egyedi id-t generálok (a statet ki kellett vennem ebből a komponensből, mert valamiért csak az esetek felében rakta be state-be az inputok értékét mielőtt adatbázisba akarta menteni azokat stateből, de így is működik és kevesebb kód)
