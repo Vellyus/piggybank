@@ -55,3 +55,5 @@
 05.10
 
 - Az input tag-eket kicseréltem önlezárókra
+
+- Megcsináltam a form-ot, hogy state-be mentsen előbb és aztán azt submitelje. A handleInputChange function valami stackOverflow-s válasz, nem igazán tudtam, hogy változtassam a state object egy bizonyos property-jét
