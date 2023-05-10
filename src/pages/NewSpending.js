@@ -21,14 +21,14 @@ export function NewSpending() {
 
       <form onSubmit={ (e) => handleSubmit(e) } id="newSpendingForm" action="submit-form.php" method="post">
         <label htmlFor="product">Tétel:
-          <input type="text" id="product" name="product" placeholder="Piros zsiráf kerekeken"></input></label>
+          <input type="text" id="product" name="product" placeholder="Piros zsiráf kerekeken" /></label>
 
 
         <label htmlFor="date">Dátum:
-          <input type="date" id="date" name="date" placeholder="Dátum"></input></label>
+          <input type="date" id="date" name="date" placeholder="Dátum" /></label>
 
         <label htmlFor="amount">Összeg:
-          <input type="number" id="amount" name="amount" placeholder="HUF"></input></label>
+          <input type="number" id="amount" name="amount" placeholder="HUF" /></label>
 
 
         <button type="submit" value="Submit">Mentés</button>

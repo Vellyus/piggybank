@@ -51,3 +51,7 @@
 
 - Az új költés form már működik és a költésekhez egyedi id-t generálok (a statet ki kellett vennem ebből a komponensből, mert valamiért csak az esetek felében rakta be state-be az inputok értékét mielőtt adatbázisba akarta menteni azokat stateből, de így is működik és kevesebb kód)
 (sikernél vagy hibánál még nem tölt be új componenst, csak console.log van)
+
+05.10
+
+- Az input tag-eket kicseréltem önlezárókra
