@@ -116,3 +116,7 @@ th,
 .bold {
   font-weight: bold;
 }
+
+.removeItem {
+  cursor: pointer;
+}

@@ -18,6 +18,11 @@ export function addNewSpending(id, item, date, amount) {
   })
 }
 
+export function removeSpending(id) {
+  const reference = ref(db, id)
+  set(reference, null)
+}
+
 export async function getData(url) {
   try {
     const response = await fetch(url)

@@ -2,14 +2,15 @@ import { useEffect, useState } from "react"
 import { getData } from "../apiService"
 import { dbUrl } from "../constant"
 import { useLoaderData } from "react-router-dom"
+import { removeSpending } from "../apiService"
 
 export function ExpenseItems() {
   const [data, setData] = useState(null)
-  const loaderData = useLoaderData()
+  let loaderData = useLoaderData()
 
   useEffect(() => {
     setData(loaderData)
-  }, [loaderData])
+  }, [loaderData, data])
 
   return (
     <>
@@ -27,7 +28,18 @@ export function ExpenseItems() {
                 <td>{ data[e].date }</td>
                 <td>{ data[e].item } </td>
                 <td>{ data[e].amount }</td>
-                <td className="bold">Törlés | Módosítás</td>
+                <td className="bold"><span className="removeItem" onClick={ () => {
+                  console.log(data)
+                  removeSpending(e)
+                  // update state to rerender
+                  setData(prevData => {
+                    const temp = prevData
+                    delete temp[`${ e }`]
+                    console.log(temp)
+                    return temp
+                  })
+                }
+                }>Törlés</span> | Módosítás</td>
               </tr>
             </>
             )
