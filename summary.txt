@@ -57,3 +57,7 @@
 - Az input tag-eket kicseréltem önlezárókra
 
 - Megcsináltam a form-ot, hogy state-be mentsen előbb és aztán azt submitelje. A handleInputChange function valami stackOverflow-s válasz, nem igazán tudtam, hogy változtassam a state object egy bizonyos property-jét
+
+05.17
+
+- Megcsináltam a törlés funkciót, de csak akkor jelennek meg a változások ha frissítem az oldalt
