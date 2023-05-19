@@ -61,3 +61,8 @@
 05.17
 
 - Megcsináltam a törlés funkciót, de csak akkor jelennek meg a változások ha frissítem az oldalt
+
+05.19
+
+- Már rendesen működik a törlés funkció, bár nem magamtól jöttem rá. Eszembe jutott, hogy megkérdezem a ChatGPT-t és tudta, hogy mi a baj a kóddal. Én az előző statet spread operator nélkül próbáltam lemásolni egy ideiglenes változóba, de úgy látszik, hogy ez nem így működik és közvetlenül az előző statet próbáltam így módosítani.
+ 
