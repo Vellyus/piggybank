@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getData } from "../apiService"
 import { dbUrl } from "../constant"
-import { useLoaderData } from "react-router-dom"
+import { useLoaderData, NavLink } from "react-router-dom"
 import { removeSpending } from "../apiService"
 
 export function ExpenseItems() {
@@ -38,13 +38,19 @@ export function ExpenseItems() {
                 <td>{ data[e].date }</td>
                 <td>{ data[e].item } </td>
                 <td>{ data[e].amount }</td>
-                <td className="bold"><span className="removeItem" onClick={ () => handleRemoveItem(e) }>Törlés</span> | Módosítás</td>
-              </tr>
+                <td className="bold"><span className="removeItem" onClick={ () => handleRemoveItem(e) }>Törlés</span> | <NavLink to={ `/expenses/${ e }` } state={ {
+                  id: e,
+                  date: data[e].date,
+                  product: data[e].item,
+                  amount: data[e].amount
+                } }
+                  className={ "editSpendingLink" }>Módosítás</NavLink></td>
+              </tr >
             </>
             )
           }) }
         </tbody>
-      </table>
+      </table >
     </>
   )
 }

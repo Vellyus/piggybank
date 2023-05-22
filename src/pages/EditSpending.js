@@ -1,18 +1,31 @@
 import { addNewSpending } from "../apiService"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useNavigate, useLocation } from "react-router-dom"
 
-export function NewSpending() {
-  let [formData, setFormData] = useState(null)
+export function EditSpending() {
+  const location = useLocation()
+  const navigate = useNavigate()
+  const [formData, setFormData] = useState(location.state)
 
   const handleInputChange = (e, key) => {
     setFormData({ ...formData, [key]: e.target.value })
   }
 
+  useEffect(() => {
+    const productInput = document.querySelector("#product")
+    const dateInput = document.querySelector("#date")
+    const amountInput = document.querySelector("#amount")
+
+    productInput.value = formData.product
+    dateInput.value = formData.date
+    amountInput.value = formData.amount
+  }, [formData])
+
   const handleSubmit = (e) => {
     e.preventDefault()
     try {
-      addNewSpending(crypto.randomUUID(), formData.product, formData.date, formData.amount)
-      document.querySelector("#newSpendingForm").reset()
+      addNewSpending(formData.id, formData.product, formData.date, formData.amount)
+      navigate("/expenses")
     } catch (error) {
       console.log(error)
     }
@@ -20,7 +33,7 @@ export function NewSpending() {
 
   return (
     <main>
-      <h2>Új költés</h2>
+      <h2>Költés módosítása</h2>
 
       <form onSubmit={ e => handleSubmit(e) } id="newSpendingForm" action="submit-form.php" method="post">
         <label htmlFor="product">Tétel:
