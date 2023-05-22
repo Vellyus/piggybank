@@ -2,7 +2,7 @@ import { addNewSpending } from "../apiService"
 import { useState } from "react"
 
 export function NewSpending() {
-  let [formData, setFormData] = useState(null)
+  const [formData, setFormData] = useState(null)
 
   const handleInputChange = (e, key) => {
     setFormData({ ...formData, [key]: e.target.value })
