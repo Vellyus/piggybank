@@ -69,3 +69,7 @@
 05.22
 
 - Megcsináltam a költés módosítása funkciót. A módosításra kattolva behoz egy ugyanolyan formot, mint az új költésnél, csak ez már ki van töltve a létező értékekkel és csak át kell írni. Mentésnél redirectel a költések oldalra.
+
+- Megcsináltam, hogy új költés bevitelekor legyen visszajelzés a sikeres mentésről és van egy gomb amivel újra visszajön egy üres form.
+
+EZZEL ELVILEG KÉSZ IS VAGYOK. :)
