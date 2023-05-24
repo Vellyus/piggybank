@@ -5,8 +5,8 @@ export function NewSpending() {
   const [formData, setFormData] = useState(null)
   const [submit, setSubmit] = useState(false)
 
-  const handleInputChange = (e, key) => {
-    setFormData({ ...formData, [key]: e.target.value })
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
   const handleSubmit = (e) => {
@@ -29,15 +29,15 @@ export function NewSpending() {
       <h2>Új költés</h2>
 
       { !submit ? (
-        <form onSubmit={ e => handleSubmit(e) } id="newSpendingForm" action="submit-form.php" method="post">
+        <form onSubmit={ handleSubmit } id="newSpendingForm" action="submit-form.php" method="post">
           <label htmlFor="product">Tétel:
-            <input onChange={ (e, key) => handleInputChange(e, key = "product") } type="text" id="product" name="product" placeholder="Piros zsiráf kerekeken" /></label>
+            <input onChange={ handleInputChange } type="text" id="product" name="product" placeholder="Piros zsiráf kerekeken" /></label>
 
           <label htmlFor="date">Dátum:
-            <input onChange={ (e, key) => handleInputChange(e, key = "date") } type="date" id="date" name="date" placeholder="Dátum" /></label>
+            <input onChange={ handleInputChange } type="date" id="date" name="date" placeholder="Dátum" /></label>
 
           <label htmlFor="amount">Összeg:
-            <input onChange={ (e, key) => handleInputChange(e, key = "amount") } type="number" id="amount" name="amount" placeholder="HUF" /></label>
+            <input onChange={ handleInputChange } type="number" id="amount" name="amount" placeholder="HUF" /></label>
 
           <button type="submit" value="Submit">Mentés</button>
         </form>

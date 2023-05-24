@@ -1,5 +1,5 @@
 import { addNewSpending } from "../apiService"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 
 export function EditSpending() {
@@ -7,18 +7,18 @@ export function EditSpending() {
   const navigate = useNavigate()
   const [formData, setFormData] = useState(location.state)
 
-  const handleInputChange = (e, key) => {
-    setFormData({ ...formData, [key]: e.target.value })
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  useEffect(() => {
-    const productInput = document.querySelector("#product")
-    const dateInput = document.querySelector("#date")
-    const amountInput = document.querySelector("#amount")
+  const productInputRef = useRef("productInput")
+  const dateInputRef = useRef("date")
+  const amountInputRef = useRef("amount")
 
-    productInput.value = formData.product
-    dateInput.value = formData.date
-    amountInput.value = formData.amount
+  useEffect(() => {
+    productInputRef.current.value = formData.product
+    dateInputRef.current.value = formData.date
+    amountInputRef.current.value = formData.amount
   }, [formData])
 
   const handleSubmit = (e) => {
@@ -35,15 +35,15 @@ export function EditSpending() {
     <main>
       <h2>Költés módosítása</h2>
 
-      <form onSubmit={ e => handleSubmit(e) } id="newSpendingForm" action="submit-form.php" method="post">
+      <form onSubmit={ handleSubmit } id="newSpendingForm" action="submit-form.php" method="post">
         <label htmlFor="product">Tétel:
-          <input onChange={ (e, key) => handleInputChange(e, key = "product") } type="text" id="product" name="product" placeholder="Piros zsiráf kerekeken" /></label>
+          <input onChange={ handleInputChange } type="text" id="product" name="product" placeholder="Piros zsiráf kerekeken" ref={ productInputRef } /></label>
 
         <label htmlFor="date">Dátum:
-          <input onChange={ (e, key) => handleInputChange(e, key = "date") } type="date" id="date" name="date" placeholder="Dátum" /></label>
+          <input onChange={ handleInputChange } type="date" id="date" name="date" placeholder="Dátum" ref={ dateInputRef } /></label>
 
         <label htmlFor="amount">Összeg:
-          <input onChange={ (e, key) => handleInputChange(e, key = "amount") } type="number" id="amount" name="amount" placeholder="HUF" /></label>
+          <input onChange={ handleInputChange } type="number" id="amount" name="amount" placeholder="HUF" ref={ amountInputRef } /></label>
 
         <button type="submit" value="Submit">Mentés</button>
       </form>
