@@ -1,5 +1,5 @@
 import { addNewSpending } from "../apiService"
-import { useState } from "react"
+import { useState, useRef } from "react"
 
 export function NewSpending() {
   const [formData, setFormData] = useState(null)
@@ -13,7 +13,6 @@ export function NewSpending() {
     e.preventDefault()
     try {
       addNewSpending(crypto.randomUUID(), formData.product, formData.date, formData.amount)
-      document.querySelector("#newSpendingForm").reset()
       setSubmit(!submit)
     } catch (error) {
       console.log(error)
@@ -43,7 +42,7 @@ export function NewSpending() {
         </form>
       ) : (<div className="submitted">
         <h3>Sikeresen mentve!</h3>
-        <button onClick={ () => handleFormReset() }>Új költés</button>
+        <button onClick={ handleFormReset }>Új költés</button>
       </div>) }
     </main>
   )
