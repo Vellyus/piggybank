@@ -1,5 +1,5 @@
 import { addNewSpending } from "../apiService"
-import { useState, useRef } from "react"
+import { useState } from "react"
 
 export function NewSpending() {
   const [formData, setFormData] = useState(null)
