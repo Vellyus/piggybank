@@ -9,7 +9,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const db = getDatabase()
 
-export function addNewSpending(id, item, date, amount) {
+export function addOrEditSpending(id, item, date, amount) {
   const reference = ref(db, id)
   return set(reference, {
     item: item,

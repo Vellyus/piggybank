@@ -1,4 +1,4 @@
-import { addNewSpending } from "../apiService"
+import { addOrEditSpending } from "../apiService"
 import { useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 
@@ -14,7 +14,7 @@ export function EditSpending() {
   const handleSubmit = (e) => {
     e.preventDefault()
     try {
-      addNewSpending(
+      addOrEditSpending(
         formData.id,
         formData.product,
         formData.date,

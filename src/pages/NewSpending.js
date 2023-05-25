@@ -1,4 +1,4 @@
-import { addNewSpending } from "../apiService"
+import { addOrEditSpending } from "../apiService"
 import { useState } from "react"
 
 export function NewSpending() {
@@ -12,7 +12,7 @@ export function NewSpending() {
   const handleSubmit = (e) => {
     e.preventDefault()
     try {
-      addNewSpending(crypto.randomUUID(), formData.product, formData.date, formData.amount)
+      addOrEditSpending(crypto.randomUUID(), formData.product, formData.date, formData.amount)
       setSubmit(!submit)
     } catch (error) {
       console.log(error)
