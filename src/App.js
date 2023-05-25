@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/new-spending", element: <NewSpending /> },
-      { path: "/expenses", element: <Expenses />, loader: expensesLoader, shouldRevalidate: true },
+      { path: "/expenses", element: <Expenses />, loader: expensesLoader },
       { path: "/expenses/:id", element: <EditSpending /> },
       { path: "*", element: <NotFound /> },
     ],

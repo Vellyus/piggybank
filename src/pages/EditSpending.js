@@ -19,8 +19,7 @@ export function EditSpending() {
         formData.product,
         formData.date,
         formData.amount
-      )
-      navigate("/expenses", { replace: true, shouldRevalidate: true })
+      ).then((response) => { navigate("/expenses", { replace: true }) })
     } catch (error) {
       console.log(error)
     }

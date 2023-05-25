@@ -11,7 +11,7 @@ const db = getDatabase()
 
 export function addNewSpending(id, item, date, amount) {
   const reference = ref(db, id)
-  set(reference, {
+  return set(reference, {
     item: item,
     date: date,
     amount: amount
