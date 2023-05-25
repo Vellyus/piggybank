@@ -8,19 +8,19 @@ import { NotFound } from "./pages/NotFound"
 import { loader as expensesLoader } from "./pages/ExpenseItems"
 import { RouterProvider } from "react-router-dom"
 
-const router = createBrowserRouter((
-  [
-    {
-      path: "/", element: <RootLayout />, children: [
-        { path: "/", element: <Home /> },
-        { path: "/new-spending", element: <NewSpending /> },
-        { path: "/expenses", element: <Expenses />, loader: expensesLoader },
-        { path: "/expenses/:id", element: <EditSpending /> },
-        { path: "*", element: <NotFound /> }
-      ]
-    },
-  ]
-))
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/new-spending", element: <NewSpending /> },
+      { path: "/expenses", element: <Expenses />, loader: expensesLoader, shouldRevalidate: true },
+      { path: "/expenses/:id", element: <EditSpending /> },
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+])
 
 function App() {
   return <RouterProvider router={ router } />
