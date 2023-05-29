@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/piggybank/static/css/main.f642ead0.css",
-    "main.js": "/piggybank/static/js/main.9eb65ad8.js",
-    "index.html": "/piggybank/index.html",
-    "main.f642ead0.css.map": "/piggybank/static/css/main.f642ead0.css.map",
-    "main.9eb65ad8.js.map": "/piggybank/static/js/main.9eb65ad8.js.map"
+    "main.css": "./static/css/main.f642ead0.css",
+    "main.js": "./static/js/main.933e816f.js",
+    "index.html": "./index.html",
+    "main.f642ead0.css.map": "./static/css/main.f642ead0.css.map",
+    "main.933e816f.js.map": "./static/js/main.933e816f.js.map"
   },
   "entrypoints": [
     "static/css/main.f642ead0.css",
-    "static/js/main.9eb65ad8.js"
+    "static/js/main.933e816f.js"
   ]
 }
