@@ -1,5 +1,4 @@
 import { RootLayout } from "./pages/RootLayout"
-import { createBrowserRouter } from "react-router-dom"
 import { Home } from "./pages/Home"
 import { NewSpending } from "./pages/NewSpending"
 import { Expenses } from "./pages/Expenses"
@@ -7,8 +6,9 @@ import { EditSpending } from "./pages/EditSpending"
 import { NotFound } from "./pages/NotFound"
 import { loader as expensesLoader } from "./pages/ExpenseItems"
 import { RouterProvider } from "react-router-dom"
+import { createHashRouter } from "react-router-dom"
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <RootLayout />,
